@@ -11,7 +11,27 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/services.css">
 </head>
-<body>
+<body
+
+  <!-- chat bot link -->
+        <script>
+          window.watsonAssistantChatOptions = {
+            integrationID: "df2db6ad-d1ee-4dcf-bd4f-428c4f4eae7f", // The ID of this integration.
+            region: "eu-gb", // The region your integration is hosted in.
+            serviceInstanceID: "b5032f06-60c5-4042-89c1-c25ccf9a56eb", // The ID of your service instance.
+            onLoad: async (instance) => { await instance.render(); }
+          };
+          setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+          });
+        </script>
+
+  
+
+  <!-- chat bot end -->
+    
       <nav>
           <input type="checkbox" id="check" name="" value="">
           <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
